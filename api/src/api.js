@@ -32,7 +32,7 @@ function findClient(cNumber){
     if(client != undefined){
       userSolicitation.clientId = client.id;
     }else{
-      return "Cliente não encontrado";
+      return {error: {code: 404, message:"Not Found"}};
     }
     console.log(userSolicitation)
     return client; //retorna os dados ao front

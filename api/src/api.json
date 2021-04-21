@@ -2,45 +2,43 @@
   "rateTable": [
     {
       "id": 1,
-      "name": "tabela 1",
+      "name": "Tabela 1",
       "installments": [
         {
           "id": 1,
           "installments": 1,
-          "installmentInterest": 100,
-          "installmentValue": 444.00,
-          "fullValue": 444.00,
-          "comission": 1.33
+          "installmentInterest": 0.16,
+          "comission": 0.05
         },
         {
           "id": 2,
           "installments": 2,
-          "installmentInterest": 20.5,
-          "installmentValue": 1338.76,
-          "fullValue": 2677.51,
-          "comission": 455.51
+          "installmentInterest": 0.19,
+          "comission": 0.07
+        },
+        {
+          "id": 3,
+          "installments": 3,
+          "installmentInterest": 0.22,
+          "comission": 0.09
         }
       ]
     },
     {
       "id": 2,
-      "name": "tabela 2",
+      "name": "Tabela 2",
       "installments": [
         {
-          "id": 3,
+          "id": 1,
           "installments": 1,
-          "installmentInterest": 10,
-          "installmentValue": 22.00,
-          "fullValue": 224.00,
-          "comission": 1.33
+          "installmentInterest": 0.15,
+          "comission": 0.05
         },
         {
-          "id": 4,
+          "id": 2,
           "installments": 2,
-          "installmentInterest": 20.5,
-          "installmentValue": 2.76,
-          "fullValue": 9.51,
-          "comission": 3.51
+          "installmentInterest": 0.20,
+          "comission": 0.10
         }
       ]
     }
@@ -48,7 +46,7 @@
   "client": [
     {
       "id": 1,
-      "name": "Teste Cliente",
+      "name": "Fellipe da Silva Sauro",
       "phone": "71999999999",
       "cpf": "25568725625",
       "bank": {
@@ -59,7 +57,7 @@
     },
     {
       "id": 2,
-      "name": "Teste Cliente",
+      "name": "Maria Daniela",
       "phone": "71222222222",
       "cpf": "22888486252",
       "bank": {
