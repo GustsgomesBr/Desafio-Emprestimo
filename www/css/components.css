@@ -31,7 +31,7 @@
   background: #e6e6e6;
 }
 .setValue input[type=submit]{
-  height: 40px;
+  height: 35px;
   width: 90px;
   border: none;
   background-color: #EF9C4B;
@@ -50,4 +50,39 @@
 .setValue input[type=submit]:focus{
   outline: none;
   border: 1px solid grey;
+}
+
+/* Tabelas */
+
+.tables{
+  background: #F8F8F8;
+}
+
+table{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  cursor: pointer;
+  background-color: white;
+  color: #777777;
+}
+
+.tables h1{
+  color: #228A95;
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 20px;
+}
+
+th, td{
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  border: 2px solid #F8F8F8;
+}
+th{
+  background: #F8F8F8;
+}
+tr:hover{
+  background-color: #f3f0cd;
 }
