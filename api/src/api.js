@@ -14,13 +14,13 @@ function getTables(){
 
 function userTable(value, table, installments){
   if(table > data.rateTable.length){
-    return 406 //Tabela solicitada maior que o esperado, retorne 406 - Not Acceptable
+    return {error: {code: 404, message: "Table Not Found"}}
   }
   else{
     userSolicitation.userValue = value;
     userSolicitation.selectedTable = table;
     userSolicitation.SelectedInstallments = installments;
-    return 200 //tudo ocorreu bem, retorne 200 - OK;
+    return userSolicitation
   }
 }
 //Segurança zero mas ok
