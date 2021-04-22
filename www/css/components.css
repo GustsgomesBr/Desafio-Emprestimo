@@ -1,0 +1,53 @@
+
+.setValue{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.setValue h1{
+  color: #228A95;
+  font-size: 20pt;
+}
+
+.setValue input[type=number]{
+  width: 300px;
+  height: 40px;
+  background: #F8F8F8;
+  color: #777777;
+  text-align: center;
+  border: none;
+  font-size: 12pt;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+.setValue input[type=number]:focus{
+  outline: none;
+  border: 1px solid grey;
+}
+
+.setValue input[type=number]:hover{
+  background: #e6e6e6;
+}
+.setValue input[type=submit]{
+  height: 40px;
+  width: 90px;
+  border: none;
+  background-color: #EF9C4B;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.setValue input[type=submit]:hover{
+  background-color: #db9045;
+} 
+
+.setValue input[type=submit]:active{
+  background-color: #c27f3d;
+} 
+
+.setValue input[type=submit]:focus{
+  outline: none;
+  border: 1px solid grey;
+}
