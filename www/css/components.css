@@ -5,6 +5,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .setValue h1{
   color: #228A95;
