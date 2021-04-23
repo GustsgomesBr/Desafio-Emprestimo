@@ -14,15 +14,17 @@ routes.get('/emprestimo', (req, res) => {
 
 })
 
-routes.post('/emprestimos/select/:valor/:tabela/:parcela', (req, res) =>{
-  const {valor, tabela, parcela} = req.params;
+routes.post('/emprestimos/selected', (req, res) =>{
+  const valor = req.query.valor;
+  const tabela = req.query.tabela;
+  const parcela = req.query.parcela;
   const result = tables.userTable(valor, tabela, parcela);
-  return res.send(result)
-
+  return res.send(result);
 })
 
-routes.get('/emprestimos/clientes/:cpf', (req, res) =>{
-  const {cpf} = req.params;
+routes.get('/emprestimos/clientes', (req, res) =>{
+  const cpf = req.query.cpf;
+
   return res.send(tables.findClient(cpf));
 
 })
