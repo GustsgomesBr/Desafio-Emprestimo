@@ -24,7 +24,6 @@ routes.post('/emprestimos/selected', (req, res) =>{
 
 routes.get('/emprestimos/clientes', (req, res) =>{
   const cpf = req.query.cpf;
-
   return res.send(tables.findClient(cpf));
 
 })

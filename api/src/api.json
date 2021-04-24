@@ -45,10 +45,12 @@
   ],
   "client": [
     {
+      "error": 0,
       "id": 1,
       "name": "Fellipe da Silva Sauro",
       "phone": "71999999999",
       "cpf": "25568725625",
+      "cpf1": "255.687.256-25",
       "bank": {
         "label": "003 - Banco da Amazonia S.A.",
         "accountTypeLabel": "Conta Corrente",
@@ -56,10 +58,12 @@
       }
     },
     {
+      "error": 0,
       "id": 2,
       "name": "Maria Daniela",
       "phone": "71222222222",
       "cpf": "22888486252",
+      "cpf1": "228.884.862-52",
       "bank": {
         "label": "260 - Nu Pagamentos S.A.",
         "accountTypeLabel": "Conta Corrente",
