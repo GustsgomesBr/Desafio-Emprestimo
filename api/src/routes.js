@@ -1,7 +1,8 @@
 const express = require('express');
 const routes = express.Router();
-const tables = require('./api')
-
+const tables = require('./api');
+const fs = require('fs');
+const basePath = __dirname;
 
 routes.get('/emprestimo', (req, res) => {
   const valor = req.query.valor
@@ -14,19 +15,20 @@ routes.get('/emprestimo', (req, res) => {
 
 })
 
-routes.post('/emprestimos/selected', (req, res) =>{
-  const valor = req.query.valor;
-  const tabela = req.query.tabela;
-  const parcela = req.query.parcela;
-  const result = tables.userTable(valor, tabela, parcela);
-  return res.send(result);
+routes.post('/emprestimos/solicitar', (req, res) =>{
+  var solicitations = require('./usersSolicitation.json');
+  solicitations.push(req.body);
+  let jsonFile = JSON.stringify(solicitations)
+  fs.writeFile(`${basePath}/usersSolicitation.json`, jsonFile, 'utf8', function(error){return error});
+  return res.send({"resposta": "ok"})
 })
 
 routes.get('/emprestimos/clientes', (req, res) =>{
   const cpf = req.query.cpf;
   return res.send(tables.findClient(cpf));
-
 })
+
+
 
 
 module.exports = routes;
