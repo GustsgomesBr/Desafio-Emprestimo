@@ -60,7 +60,7 @@ function CreateUserLabel(){
 
 
   solicitBtn.addEventListener("click", function(){
-    window.open(`/pagamento.html?tab=${tab}&parc=${parc}&valor=${valor}&cpf=${userData.cpf}`, '_self') //gravando opções do usuario no link
+    window.open(`/forma-pagamento.html?tab=${tab}&parc=${parc}&valor=${valor}&cpf=${userData.cpf}`, '_self') //gravando opções do usuario no link
   })
   
   app.appendChild(clientDiv)
