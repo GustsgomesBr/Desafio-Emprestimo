@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/solicitar/components.css">
+</head>
+<body>
+  <header>
+    <img src="img/icons/klutch-logo.png">
+  </header>
+  <main>
+    <section class="infos">
+      <img id="plus-icon" src="img/icons/plus-green.png" alt="">
+      <img id="files-icon" src="img/icons/files-orange.png" alt="">
+      <h1>Solicitar Empréstimo</h1>
+    </section>
+    <section class="App">
+      <div class="setValue">
+        <h1>Busque o Cliente</h1>
+        <div class="buttons">
+          <input id="valueInput" type="text" placeholder="000.000.000-00" onclick="this.placeholder = ''"/>
+          <input type="submit" value="Buscar" onclick="Encontrar(document.getElementById('valueInput').value)">
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="/js/encontrar_clientes.js"></script>
+</html>

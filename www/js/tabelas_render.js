@@ -152,7 +152,7 @@ function CreateFooter(table, parcelas, valorParcela){
   footer.appendChild(submitBtn);
 
   submitBtn.addEventListener("click", function(){
-    window.open(`?tab=${clientSolicitation.tabela}&parc=${clientSolicitation.parcelas}`, '_self')
+    window.open(`/solicitar.html?tab=${clientSolicitation.tabela}&parc=${clientSolicitation.parcelas}&valor=${valorSolicitado}`, '_self') //gravando opções do usuario no link
   })
 
 }

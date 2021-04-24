@@ -7,7 +7,7 @@
 }
 body{
   display: grid;
-  grid-template-rows: 1fr 15fr;
+  grid-template-rows: 0.5fr 5fr;
 }
 header{
   background: #228A95;
@@ -16,34 +16,13 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 main{
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 5rem;
-}
-.infos{
-  display: flex;
-  align-items: center;
-  margin-right: 20rem;
-  margin-bottom: 1rem;
-}
-.infos h1{
-  color: #228A95;
-  font-size: 24pt;
-  margin-right: 5rem;
-  width: 10rem;
-}
-.infos #plus-icon{
-  width: 40px;
-  height: 45px;
-  margin-right: 1rem;
-}
-.infos #files-icon{
-  width: 80px;
-  height: 80px;
-  margin-right: 1rem;
 }
 
 footer{
@@ -61,6 +40,7 @@ footer{
 
 footer h1{
   font-size: 17pt;
+  margin-left: 2rem;
   margin-right: 2rem;
   cursor: pointer;
 }
