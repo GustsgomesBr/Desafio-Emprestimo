@@ -31,7 +31,7 @@
 .setValue input[type=number]:hover{
   background: #e6e6e6;
 }
-.setValue input[type=submit]{
+input[type=submit]{
   height: 35px;
   width: 90px;
   border: none;
@@ -40,15 +40,15 @@
   border-radius: 5px;
   font-weight: 700;
 }
-.setValue input[type=submit]:hover{
+input[type=submit]:hover{
   background-color: #db9045;
 } 
 
-.setValue input[type=submit]:active{
+input[type=submit]:active{
   background-color: #c27f3d;
 } 
 
-.setValue input[type=submit]:focus{
+input[type=submit]:focus{
   outline: none;
   border: 1px solid grey;
 }

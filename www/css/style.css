@@ -5,12 +5,10 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
 body{
   display: grid;
-  grid-template-rows: 0.5fr 3fr;
+  grid-template-rows: 1fr 15fr;
 }
-
 header{
   background: #228A95;
   width: 100%;
@@ -19,20 +17,18 @@ header{
   align-items: center;
   justify-content: center;
 }
-
 main{
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 5rem;
 }
-
 .infos{
   display: flex;
   align-items: center;
   margin-right: 20rem;
   margin-bottom: 1rem;
 }
-
 .infos h1{
   color: #228A95;
   font-size: 24pt;
@@ -48,4 +44,23 @@ main{
   width: 80px;
   height: 80px;
   margin-right: 1rem;
+}
+
+footer{
+  width: 100vw;
+  height: 60px;
+  background-color: #228A95;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+footer h1{
+  font-size: 17pt;
+  margin-right: 2rem;
+  cursor: pointer;
 }
