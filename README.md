@@ -2,12 +2,6 @@
     <a href="https://emprestimos-desafio.netlify.app/">Acessar a demonstração</a>
 <h3 >
 
-# Indice
-- [Sobre](#-sobre)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Como iniciar o projeto](#-como-baixar-o-projeto)
-- [Informações importantes](#-informacoes-importantes)
-
 ## 🔖Sobre
 
 O projeto **Desafio-Emprestimo** é um desafio FullStack proposto por uma startup no processo seletivo.
