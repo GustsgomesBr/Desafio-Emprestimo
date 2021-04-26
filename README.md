@@ -30,6 +30,9 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
     # Entrar no diretório
     $ cd api
 
+    # Instalar as dependencias
+    $ npm i
+
     # Iniciar o projeto
     $ npm start
 ```
@@ -104,6 +107,44 @@ Apenas para revisão, sem interação.
 ---
 
 ## Back-End:
-O back-end
+O back-end foi separado em três partes principais; Server.js (setup do servidor) Routes.js (setup das rodas do servidor) e Api.js (funções mais complexas para deixar o Routes.js mais "limpo")
 
-Desenvolvido 💜 por Gustavo Gomes
+---
+
+### Rotas:
+#### /emprestimo:
+
+Esta rota recebe o valor solicitado, confirma se ele é maior de 300 e menor de 10.000 e chama o Api.js para retornar as tabelas.
+
+---
+
+#### /emprestimos/clientes:
+
+Esta rota recebe o CPF e chama o Api.js para retornar o cliente do CPF pesquisado
+
+---
+
+#### /emprestimos/solicitar:
+
+Esta rota recebe todas as informações da solicitação de emprestimo do front-end e escreve na base inProgressSolicitation.json;
+retornando enfim apenas um resposta: ok
+
+---
+
+#### /emprestimos/solicitacoes:
+
+Esta rota compara o token do front-end com o token das solicitações em progresso e retorna as informações da solicitação.
+
+---
+
+#### /emprestimos/solicitacoes/concluir:
+
+Esta rota recebe o token do front-end e chama o  Api.js para concluir a solicitação em progresso, apagando-a do banco inProgressSolicitation.json e passando para o banco completeSolicitation.json (banco das solicitações completas).
+
+---
+
+#### /emprestimos/solicitacoes/completas:
+
+Esta ultima rota recebe o token do front-end e retorna as informações completas da solicitação de emprestimo feita.
+
+Desenvolvido com 💜
