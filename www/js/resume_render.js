@@ -29,7 +29,6 @@ function RenderInfos(){
   var vtdEmprestimo = document.getElementById('vtdEmprestimo');
   var parcelas = document.getElementById('parcelas');
   var vdParcela = document.getElementById('vdParcela');
-
   if(solicitation != undefined){
     nTable.innerHTML = solicitation.calc.tabela.name;
     vDesejado.innerHTML = solicitation.calc.valor;
@@ -118,11 +117,35 @@ function RenderTabela(){
     }
   }
 
+  function ConcluirSolicitacao(){
+    if(automatico){
+      solicitation.contrato = "Automático"
+    }else{
+      solicitation.contrato = "Manual"
+    }
+    async function sendSolicitacao(){
+      try{
+        const response = await fetch(`http://localhost:3000/emprestimos/solicitacoes/concluir?token=${solicitation.token}`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(solicitation)
+        });
+        const data = await response.json()
+        if(data.resposta === "ok"){
+          console.log('Solicitação concluida com sucesso!!');
+          window.open(`/resumo-solicitacao.html?token=${userSolicitation.token}`, '_self')
+        }
 
-
-
-
-
+      }
+      catch (error){
+        console.error(error);
+      }
+    }
+    sendSolicitacao();  
+  }
 
 
 
