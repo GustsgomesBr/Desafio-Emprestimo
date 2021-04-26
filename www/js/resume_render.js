@@ -9,7 +9,7 @@ var solicitation;
 
 async function GetData(){
   try{
-    const response = await fetch(`http://localhost:3000/emprestimos/solicitacoes?token=${token}`);
+    const response = await fetch(`https://emprestimos-back.herokuapp.com/emprestimos/solicitacoes?token=${token}`);
     const data = await response.json();
     solicitation = data;
     RenderInfos()
@@ -125,7 +125,7 @@ function RenderTabela(){
     }
     async function sendSolicitacao(){
       try{
-        const response = await fetch(`http://localhost:3000/emprestimos/solicitacoes/concluir?token=${solicitation.token}`, {
+        const response = await fetch(`https://emprestimos-back.herokuapp.com/emprestimos/solicitacoes/concluir?token=${solicitation.token}`, {
           method: 'POST',
           headers: {
             'Accept': 'application/json',

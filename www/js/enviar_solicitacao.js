@@ -35,7 +35,7 @@ function CheckCard(){
 function PostData(){
     async function sendData(){
       try{
-        const response = await fetch(`http://localhost:3000/emprestimos/solicitar`, {
+        const response = await fetch(`https://emprestimos-back.herokuapp.com/emprestimos/solicitar`, {
           method: 'POST',
           headers: {
             'Accept': 'application/json',

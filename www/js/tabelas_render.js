@@ -12,7 +12,7 @@ function Calcular(value){
   }else{
     async function getTables(){
       try{
-        const response = await fetch(`http://localhost:3000/emprestimo?value=${value}`);
+        const response = await fetch(`https://emprestimos-back.herokuapp.com/emprestimo?value=${value}`);
         const data = await response.json();
         tabelas = data;
         valorSolicitado = parseFloat(value);

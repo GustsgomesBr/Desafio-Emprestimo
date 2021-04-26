@@ -5,7 +5,7 @@ var token = url.searchParams.get("token");
 var sucessData
 async function GetSucessData(){
   try{
-    const response = await fetch(`http://localhost:3000/emprestimos/solicitacoes/completas?token=${token}`);
+    const response = await fetch(`https://emprestimos-back.herokuapp.com/emprestimos/solicitacoes/completas?token=${token}`);
     const data = await response.json();
     sucessData = data;
     RenderClientData();

@@ -16,7 +16,7 @@ function Encontrar(text){
   }else{
     async function getUsers(){
       try{
-        const response = await fetch(`http://localhost:3000/emprestimos/clientes?cpf=${text}`);
+        const response = await fetch(`https://emprestimos-back.herokuapp.com/emprestimos/clientes?cpf=${text}`);
         const data = await response.json();
         if(data.error === 0){
           userData = data
