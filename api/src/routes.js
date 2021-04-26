@@ -40,5 +40,10 @@ routes.post('/emprestimos/solicitacoes/concluir', (req, res) =>{
   return res.send(tables.ConcludeSolicitation(req.body, token));
 })
 
+routes.get('/emprestimos/solicitacoes/completas', (req, res) =>{
+  var token = req.query.token;
+  return res.send(tables.findSucessSolicitation(token))
+})
+
 
 module.exports = routes;

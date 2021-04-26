@@ -1,6 +1,7 @@
 const data = require('./api.json');
 const solicitationData = require('./inProgressSolicitation.json');
-const tables = {getTables, userTable, findClient, findSolicitation, ConcludeSolicitation}
+const sucessSolicitationData = require('./completeSolicitations.json')
+const tables = {getTables, userTable, findClient, findSolicitation, ConcludeSolicitation, findSucessSolicitation}
 const fs = require('fs');
 const basePath = __dirname;
 
@@ -61,8 +62,14 @@ function calculeClientSolicitation(tabela, valor, parcelas){
 function ConcludeSolicitation(req, token){
   //adicionando a solicitação completa para o banco de solicitações completas;
   var cpSolicitations = require('./completeSolicitations.json');
+  for (let i = 0; i < data.client.length; i++) {
+    if(req.cpf === data.client[i].cpf){
+      req.userInfos = data.client[i];
+    }
+  }
   cpSolicitations.push(req);
-  let cpJsonFile = JSON.stringify(cpSolicitations)
+  let cpJsonFile = JSON.stringify(cpSolicitations);
+
   fs.writeFile(`${basePath}/completeSolicitations.json`, cpJsonFile, 'utf8', function(error){return error});
   
   //apagando a solicitação do banco de solicitações em progresso
@@ -73,6 +80,19 @@ function ConcludeSolicitation(req, token){
   fs.writeFile(`${basePath}/inProgressSolicitation.json`, inJsonFile, 'utf8', function(error){return error});
 
   return ({status: "OK!"})
+}
+
+function findSucessSolicitation(tNumber){
+  function clientToken(user){
+    return user.token == tNumber;
+  }
+  var completeSolicitation = sucessSolicitationData.find(clientToken);
+  if(completeSolicitation != undefined){
+    return completeSolicitation
+  }else{
+    return {error: {code: 404, message:"Not Found"}};
+  } 
+
 }
 
 
