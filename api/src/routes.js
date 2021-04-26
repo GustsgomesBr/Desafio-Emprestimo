@@ -12,16 +12,8 @@ routes.get('/emprestimo', (req, res) => {
   }else{
     return res.json(tables.getTables()) //chamando tables.js para retornar as tabelas
   }
-
 })
 
-routes.post('/emprestimos/solicitar', (req, res) =>{
-  var solicitations = require('./usersSolicitation.json');
-  solicitations.push(req.body);
-  let jsonFile = JSON.stringify(solicitations)
-  fs.writeFile(`${basePath}/usersSolicitation.json`, jsonFile, 'utf8', function(error){return error});
-  return res.send({"resposta": "ok"})
-})
 
 routes.get('/emprestimos/clientes', (req, res) =>{
   const cpf = req.query.cpf;
@@ -29,6 +21,24 @@ routes.get('/emprestimos/clientes', (req, res) =>{
 })
 
 
+routes.post('/emprestimos/solicitar', (req, res) =>{
+  var solicitations = require('./inProgressSolicitation.json');
+  solicitations.push(req.body);
+  let jsonFile = JSON.stringify(solicitations)
+  fs.writeFile(`${basePath}/inProgressSolicitation.json`, jsonFile, 'utf8', function(error){return error});
+  return res.send({"resposta": "ok"})
+})
+
+routes.get('/emprestimos/solicitacoes', (req, res) => {
+  const token = req.query.token;
+  var Solicitacao = tables.findSolicitation(token);
+  return res.send(Solicitacao);
+})
+
+routes.post('/emprestimos/solicitacoes/concluir', (req, res) =>{
+  var token = req.query.token;
+  return res.send(tables.ConcludeSolicitation(req.body, token));
+})
 
 
 module.exports = routes;
