@@ -11,6 +11,7 @@ userSolicitation.parcelas = parc;
 userSolicitation.valor = valor;
 userSolicitation.cpf = cpf;
 userSolicitation.cardInfo = {}
+userSolicitation.token = Math.random().toString(36).substr(2);
 
 function CheckCard(){
   var inputNome = document.getElementById('nomeCartao');
@@ -28,8 +29,6 @@ function CheckCard(){
     console.log(userSolicitation)
     PostData();
   }
-
-
 }
 
 
@@ -47,7 +46,7 @@ function PostData(){
         const data = await response.json()
         if(data.resposta === "ok"){
           console.log('Dados enviados com sucesso!');
-
+          window.open(`/resumo-solicitacao.html?token=${userSolicitation.token}`, '_self')
         }
 
       }

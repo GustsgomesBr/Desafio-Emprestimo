@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo da Solicitação</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/resumo/components.css">
+</head>
+<body>
+  <header>
+  <img src="img/icons/klutch-logo.png">
+</header>
+<main>
+  <section class="infos">
+    <img id="plus-icon" src="img/icons/plus-green.png" alt="">
+    <img id="files-icon" src="img/icons/files-orange.png" alt="">
+    <h1>Solicitar Empréstimo</h1>
+  </section>
+  <div class="App">
+    <section class="solicInfos">
+      <div class="itemInfos">
+        <h1>Tabela:</h1>
+        <div class="dataInfo">
+          <h1 id="nTable">Tabela ...</h1>
+        </div>
+      </div>
+      <div></div>
+      <div class="itemInfos green">
+        <h1>Valor Desejado:</h1>
+        <div class="dataInfo">
+          <h1 id="vDesejado">R$...</h1>
+        </div>
+      </div>
+      <div class="itemInfos green">
+        <h1>Valor Total do Empréstimo:</h1>
+        <div class="dataInfo">
+          <h1 id="vtdEmprestimo">R$...</h1>
+        </div>
+      </div>
+      <div class="itemInfos">
+        <h1>Parcelas:</h1>
+        <div class="dataInfo">
+          <h1 id="parcelas">...</h1>
+        </div>
+      </div>
+      <div class="itemInfos">
+        <h1>Valor da Parcela:</h1>
+        <div class="dataInfo">
+          <h1 id="vdParcela">R$...</h1>
+        </div>
+      </div>
+      <div class="contractBtns">
+        <p style="position: absolute; transform: translateY(-45px); color: #228A95; font-size: 10pt;">Escolha o tipo de contrato:</p>
+        <input type="button" value="Automático" class="automatico"  id="active" onclick="TipoContrato(true)">
+        <input type="button" value="Manual" class="manual" onclick="TipoContrato(false)">
+      </div>
+      <input type="button" value="Concluir" class="concluirBtn">
+    </section>
+  </div>
+</main>
+</body>
+
+<script src="js/resume_render.js"></script>
+</html>

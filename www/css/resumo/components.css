@@ -1,0 +1,128 @@
+.solicInfos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 2rem;
+  grid-gap: 15px;
+}
+
+.itemInfos{
+  width: 400px;
+  height: 60px;
+  display: flex;
+  background-color: #F8F8F8;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+}
+
+.itemInfos h1{
+  font-size: 12pt;
+  color: #228A95;
+  min-width: 50%;
+}
+
+.itemInfos{
+  display: flex;
+  align-items: center;
+}
+
+.dataInfo{
+  background-color: #FFFFFF;
+  min-width: 50%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+.dataInfo h1{
+  color: #EF9C4B;
+  font-style: italic;
+}
+
+.green{
+  background-color: #E8FFE3;
+}
+
+.contractBtns{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-top: 1rem;
+}
+
+.contractBtns input[type="button"]{
+  border: none;
+  width: 50%;
+  height: 100%;
+  font-size: 15pt;
+  font-weight: 700;
+  color: #228A95;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.contractBtns input[type="button"]:hover{
+  opacity: 0.8;
+}
+
+.contractBtns input[type="button"]:focus{
+  outline: none;
+}
+
+#active{
+  background-color: #228A95;
+  color: white;
+  border-radius: 5px;
+}
+
+.concluirBtn{
+  background-color: #228A95;
+  font-size: 15pt;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.concluirBtn:focus{
+  outline: none;
+}
+
+.concluirBtn:hover{
+  opacity: 0.8;
+}
+
+/* Tabelas */
+
+.tables{
+  background: #F8F8F8;
+  margin-top: 3rem;
+}
+
+table{
+  margin-top: 1rem;
+  border-collapse: collapse;
+  background-color: white;
+  color: #777777;
+}
+
+.tables h1{
+  color: #228A95;
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 20px;
+}
+
+th, td{
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  border: 2px solid #F8F8F8;
+}
+th{
+  background: #F8F8F8;
+}
