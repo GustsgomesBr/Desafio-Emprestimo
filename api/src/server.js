@@ -11,4 +11,8 @@ server.use(routes)
 
 server.use(express.json());
 
-server.listen(3000, () => console.log('Servidor rodando na porta 3000'))
+const port = process.env.PORT || 8000;
+
+server.listen(port, () => {
+  console.log("Rodando na porta: " + port);
+});
