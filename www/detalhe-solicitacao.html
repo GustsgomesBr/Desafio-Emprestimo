@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhe da Solicitação</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/detalhe/components.css">
+</head>
+<body>
+  <header>
+    <img src="img/icons/klutch-logo.png">
+  </header>
+  <main>
+    <section class="infos">
+      <img id="files-icon" src="img/icons/files-orange.png" alt="">
+      <h1>Detalhe de Solicitação</h1>
+    </section>
+    <div class="App">
+      <div class="leftSide">
+        <div class="fromSolic">
+          <p>Solicitação gerada por <b>Sistema Credfica</b></p>
+        </div>
+        <div class="leftItem">
+          <p>Valor Total</p>
+          <h1 id="valorTotal">R$6000,00</h1>
+        </div>
+        <div class="leftItem">
+          <p>Valor a Depositar</p>
+          <h1 id="valorDepositar">R$6000,00</h1>
+        </div>
+
+        <div class="leftItem">
+          <p>Frente do cartão</p>
+          <img src="/img/icons/document.svg" alt="">
+          <a href=""><u>Ver Comprovante</u></a>
+        </div>
+
+        <div class="leftItem">
+          <p>Verso do cartão</p>
+          <img src="/img/icons/document.svg" alt="">
+          <a href=""><u>Ver Comprovante</u></a>
+        </div>
+
+        <div class="leftItem">
+          <p>Selfie com cartão</p>
+          <img src="/img/icons/document.svg" alt="">
+          <a href=""><u>Ver Comprovante</u></a>
+        </div>
+      </div>
+      <div class="rightSide">
+        <div class="fromSolic">
+          <p>Fluxo da Solicitação: <b id="fluxoSolicitacao">Manual</b></p>
+        </div>
+
+        <div class="rightItem">
+          <p style="margin-top: 0.5rem; font-size: 9pt;">Modalidade: </p>
+          <div><h4>Cartão de Crédito</h4> <img src="/img/icons/credit-card.svg" alt=""></div>
+          <h4>Número do cartão: <u id="numeroCartao"></u></h4>
+          <div><h4>Validade: <u id="validadeCartao"></u></h4> <h4 style="margin-left: 4rem;">CVC: <u id="codigoCartao"></u></h4></div>
+          <h4><u id="parcelas"></u> parcelas de: <b id="valorParcela"></b></h4>
+          <h4>Tabela: <u id="nomeTabela"></u></h4>
+        </div>
+
+        <div class="rightItem">
+          <p style="margin-top: 0.5rem; font-size: 9pt;">Informações do Cliente: </p>
+          <h4>Nome: <u id="clienteNome"></u></h4>
+          <h4>CPF: <u id="clienteCPF"></u></h4>
+          <h4>Agência: <u id="clienteAgencia"></u></h4>
+          <h4>Banco: <u id="clienteBanco"></u></h4>
+          <h4>Tipo de Conta: <u id="clienteConta"></u></h4>
+          <h4>Número da conta: <u id="clienteNConta"></u></h4>
+        </div>
+
+        <div class="adminRightItem">
+          <p style="margin-top: 0.5rem; font-size: 9pt;">Informações Gerais:</p>
+          <div class="buttons">
+            <h4 id="data">Data</h4>
+            <button id="orange"><img src="img/icons/btn/alert.svg">Aguardando</button>
+            <div style="width: 100%;display: flex;"><button id="blue"><img src="img/icons/btn/checkmark.svg">Pré Aprovar</button> <button id="red"><img src="img/icons/btn/alert.svg">Reprovar</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="js/detalhe_solicitacao.js"></script>
+<script>
+  var now = new Date()
+  var meses = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+  document.getElementById('data').innerHTML = now.getDate() + "/" + meses[now.getMonth()] + "/" + now.getFullYear()
+</script>
+</html>

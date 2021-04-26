@@ -31,10 +31,10 @@ function RenderInfos(){
   var vdParcela = document.getElementById('vdParcela');
   if(solicitation != undefined){
     nTable.innerHTML = solicitation.calc.tabela.name;
-    vDesejado.innerHTML = solicitation.calc.valor;
-    vtdEmprestimo.innerHTML = solicitation.calc.valorTotal;
+    vDesejado.innerHTML = "R$ " +  solicitation.calc.valor.toFixed(2);
+    vtdEmprestimo.innerHTML = "R$ " +  solicitation.calc.valorTotal.toFixed(2);
     parcelas.innerHTML = solicitation.calc.parcelas;
-    vdParcela.innerHTML = solicitation.calc.valorParcelas;
+    vdParcela.innerHTML = "R$ " + solicitation.calc.valorParcelas.toFixed(2);
     RenderTabela()
   }
 }
@@ -134,9 +134,9 @@ function RenderTabela(){
           body: JSON.stringify(solicitation)
         });
         const data = await response.json()
-        if(data.resposta === "ok"){
+        if(data.status === "OK!"){
           console.log('Solicitação concluida com sucesso!!');
-          window.open(`/resumo-solicitacao.html?token=${userSolicitation.token}`, '_self')
+          window.open(`/sucesso-solicitacao.html?token=${token}`, '_self')
         }
 
       }
